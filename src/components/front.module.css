@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'Cascadia';
+    src: url('../../public/Cascadia.ttf');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../../public/Barlow-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Barlow-Exb';
+    src: url('../../public/Barlow-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'ZillaSlab';
+    src: url('../../public/ZillaSlab-Bold.ttf');
+}
+
+@font-face {
+font-family: 'ChiTown NF Regular';
+font-style: normal;
+font-weight: normal;
+src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('woff');
+}
+
+.main {
+    width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.front {
+    cursor: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 22px 50px;
+    z-index: 10;
+}
+
+.cursor {
+    display: none;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.navbar {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60px;
+}
+
+.button {
+    font-family: 'Cascadia';
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.threed {
+    width: 100%;
+    height: 100%;
+}
+
+.threed {
+    width: 100%;
+    height: 42%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.heading {
+    font-family: 'Barlow';
+    display: none;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.heading h2 {
+    font-family: "ZillaSlab";
+}
+
+.mainhead {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'ChiTown NF Regular';
+    font-size: 30px;
+}
+
+.para {
+    width: 90%;
+    font-family: "Barlow";
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(199, 199, 199);
+}
+
+.footer {
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+    font-family: 'Cascadia';
+    font-size: 12px;
+}
+
+.footer footer button {
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 2px solid white;
+    gap: 5px;
+}
+
+.buttonarr {
+    filter: invert();
+    width: 22px;
+}
+
+.mainbutton {
+    margin-top: 1.5rem;
+    font-family: 'Cascadia';
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.text {
+    animation: left-to-right-fade-in 1s ease-in;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  
+  @keyframes left-to-right-fade-in {
+    0% {
+      -webkit-mask-size: 0%;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+    100% {
+      -webkit-mask-size: 100%;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+
+
+  .loading {
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg {
+    filter: invert();
+    height: 150px;
+    width: 150px;
+    animation: fade 3s ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        -webkit-mask-size: 0%;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1) 70%,
+          rgba(0, 0, 0, 0)
+        );
+      }
+      100% {
+        -webkit-mask-size: 100%;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1) 70%,
+          rgba(0, 0, 0, 0)
+        );
+      }
+}
+
+@media (min-width: 1024px) {
+    .para {
+        width: 50%;
+    }
+
+    .cursor {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 80px;
+    }
+
+    .heading {
+        display: flex;
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 17px;
+    }
+
+    .mainhead {
+        font-size: 50px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .mainbutton {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+    .logo {
+        width: 80px;
+    }
+
+    .heading {
+        display: flex;
+        font-size: 15px;
+    }
+    
+    .button {
+        font-size: 14px;
+    }
+
+    .mainhead {
+        font-size: 38px;
+    }
+
+    .para {
+        font-size: 16px;
+    }
+
+    .mainbutton {
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
