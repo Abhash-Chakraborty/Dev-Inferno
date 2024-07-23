@@ -112,6 +112,7 @@ src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('wo
 }
 
 .mainhead {
+    color: white;
     width: 100%;
     display: flex;
     text-align: center;
