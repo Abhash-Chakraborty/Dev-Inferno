@@ -132,33 +132,35 @@ src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('wo
 
 .footer {
     position: absolute;
-    left: 60px;
-    bottom: 50px;
+    left: 40px;
+    bottom: 30px;
     font-family: 'Cascadia';
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .footer footer button {
     display: flex;
-    padding: 10px 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
     border-radius: 8px;
     border: 2px solid white;
-    gap: 5px;
+    gap: 3px;
 }
 
 .buttonarr {
     filter: invert();
-    width: 22px;
+    width: 18px;
 }
 
 .mainbutton {
     margin-top: 1.5rem;
     font-family: 'Cascadia';
-    font-size: 14px;
+    font-size: 16px;
     background-color: white;
     color: black;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 10px 15px;
 }
 
 .text {
@@ -264,6 +266,16 @@ src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('wo
 
     .footer {
         font-size: 17px;
+        left: 60px;
+        bottom: 50px;
+    }
+
+    .buttonarr {
+        width: 22px;
+    }
+
+    .footer footer button {
+        padding: 10px 10px;
     }
 }
 
@@ -295,5 +307,13 @@ src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('wo
 
     .footer {
         font-size: 14px;
+    }
+
+    .buttonarr {
+        width: 20px;
+    }
+
+    .footer footer button {
+        padding: 10px 10px;
     }
 }
