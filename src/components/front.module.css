@@ -132,7 +132,7 @@ src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('wo
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     left: 40px;
     bottom: 30px;
     font-family: 'Cascadia';
@@ -143,11 +143,77 @@ src: local('ChiTown NF Regular'), url('../../public/Chi-TownNF.woff') format('wo
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 45px;
+    width: 150px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
     padding: 5px 8px;
     border-radius: 8px;
+    outline: 0;
+    overflow:hidden;
+    background: none;
     border: 2px solid white;
     gap: 3px;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
 }
+
+.slide:after{
+    content:"Learn More";
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top: 20px;
+    text-align:center;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  }
+  
+  .slide:before {
+    content:"Read it →";
+    top: 20px;
+    height:100%;
+    width:100%;
+    position:absolute;
+    color:#000000;
+    left:-100%;
+    opacity: 0;
+    -webkit-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  }
+  
+  .slide:hover{
+    background:#ffffff;
+  }
+  
+  .slide:hover:before{
+    left:0;
+    opacity:1;
+    color:#000000;
+  }
+  .slide:hover:after{
+    left:100%;
+    opacity:0;
+  }
+  
+  .slide.left:hover{
+    background:none;
+  }
+  
+  .slide.left:before {
+    left:100%;
+    color:#ffffff;
+    -webkit-transition: all 425ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  }
+  
+  .slide.left:hover:before{
+    left:0;
+  }
 
 .buttonarr {
     filter: invert();

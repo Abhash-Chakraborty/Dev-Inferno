@@ -83,7 +83,7 @@ export default function Front() {
             </h2>
           </div>
           <div>
-            <button className={styles.button}>Register</button>
+            <a href="https://forms.gle/qpKjyNoU5SdVeBjz6" target='blank' className={styles.button}>Register</a>
           </div>
         </nav>
         <div className={styles.threed}></div>
@@ -92,15 +92,17 @@ export default function Front() {
             <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} className={styles.text}>DEV. Inferno</h1>
           </div>
           <div className={styles.para}>
-            <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={styles.text}>Front - end development. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ratione illum rerum ex laudantium consequuntur.</p>
+            <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={styles.text}>"Dev Inferno" is a 3-hour long frontend development challenge where participants will receive a Figma Design/UI and are tasked with bringing it to life using any programming language or framework of their choice. This is a chance to showcase your frontend development skills and creativity.</p>
           </div>
-          <div className={styles.mainbutton}>
-            <button className={styles.text}>Register</button>
-          </div>
+          <a href="https://forms.gle/qpKjyNoU5SdVeBjz6" target='blank'>
+            <div className={styles.mainbutton}>
+              <button className={styles.text}>Register</button>
+            </div>
+          </a>
         </div>
         <div className={`${styles.footer} ${styles.text}`}>
           <footer>
-            <button>Learn More <img src="arrow.svg" className={styles.buttonarr} alt="" /></button>
+            <a href="https://events.mozillafirefoxvitb.com/devinferno/Dev%20Inferno%20Instructions%20.pdf" target='blank'><button className={styles.slide}></button></a>
           </footer>
         </div>
       </div>
